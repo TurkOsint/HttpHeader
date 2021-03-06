@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 )
-
+//Argümanlar.
 func main() {
 
 	if len(os.Args) != 2 {
@@ -15,8 +15,10 @@ func main() {
 
 	url := os.Args[1]
 
-
+//Response 
 	response, err := http.Head(url)
+	
+	//Olası Hata : Yanlış Url Girilmesi
 	if err != nil {
 		fmt.Println(`
 ###      ###  _____         _    ___     _     _   
@@ -27,7 +29,7 @@ func main() {
 ###      ### Kodlayan : https://github.com/EyupErgin`)	
 		log.Fatal("[TurkOsint] URL Alınırken Hata Oluştu Lütfen Doğru URL'yi Yazınız.")
 	}
-
+	//Başarılı : Geri dönen istekleri yaz. 
 	fmt.Println(`
 ###      ###  _____         _    ___     _     _   
 #	 o # |_   _|  _ _ _| |__/ _ \ __(_)_ _| |_ 
@@ -40,6 +42,7 @@ func main() {
 	}
 }
 
+	//Olası Hata : 1'den fazla string girilmesi
 func usage(name string) {
 	fmt.Println(`
 ###      ###  _____         _    ___     _     _   
