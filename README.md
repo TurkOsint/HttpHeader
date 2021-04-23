@@ -28,23 +28,21 @@ HttpHeader is a tool that returns headers specified as HEAD in HTTP requests and
 <h2 align="left">Installing:</h2>
 
 ```
-git clone https://github.com/IntelSights/HttpHeader.git
+go get -u github.com/IntelSights/HttpHeader.git
 ```
 
 <h2 align="left">Using:</h2>
 
 ```
-cd HttpHeader/
 
-./HttpHeader -g https://example.com/
+HttpHeader -g https://example.com/
 ```
 
 <h2 align="left">Example:</h2>
 
 ```
-cd HttpHeader/
 
-./HttpHeader -g https://example.com
+HttpHeader -g https://example.com
 
 Output;
 Accept-Ranges: bytes
